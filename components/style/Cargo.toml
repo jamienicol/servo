@@ -47,8 +47,8 @@ pdqsort = "0.1.0"
 rayon = "0.6"
 rustc-serialize = "0.3"
 selectors = { path = "../selectors" }
-serde = {version = "0.8", optional = true}
-serde_derive = {version = "0.8", optional = true}
+serde = {version = "0.9", optional = true}
+serde_derive = {version = "0.9", optional = true}
 servo_atoms = {path = "../atoms", optional = true}
 servo_config = {path = "../config"}
 smallvec = "0.1"
