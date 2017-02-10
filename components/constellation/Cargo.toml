@@ -11,6 +11,7 @@ path = "lib.rs"
 
 [dependencies]
 backtrace = "0.3"
+bincode = "1.0.0-alpha1"
 bluetooth_traits = { path = "../bluetooth_traits" }
 canvas = {path = "../canvas"}
 canvas_traits = {path = "../canvas_traits"}
@@ -39,7 +40,8 @@ servo_url = {path = "../url", features = ["servo"]}
 webvr_traits = {path = "../webvr_traits"}
 
 [dependencies.webrender_traits]
-git = "https://github.com/servo/webrender"
+git = "https://github.com/nox/webrender"
+rev = "serde"
 default-features = false
 features = ["serde_derive", "ipc"]
 

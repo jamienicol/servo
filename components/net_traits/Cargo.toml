@@ -10,6 +10,7 @@ name = "net_traits"
 path = "lib.rs"
 
 [dependencies]
+bincode = "1.0.0-alpha1"
 cookie = {version = "0.2.5", features = ["serialize-rustc"]}
 heapsize = "0.3.0"
 heapsize_derive = "0.1"
@@ -30,6 +31,7 @@ uuid = {version = "0.4", features = ["v4", "serde"]}
 websocket = "0.17"
 
 [dependencies.webrender_traits]
-git = "https://github.com/servo/webrender"
+git = "https://github.com/nox/webrender"
+rev = "serde"
 default-features = false
 features = ["serde_derive", "ipc"]

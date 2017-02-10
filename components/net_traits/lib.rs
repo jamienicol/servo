@@ -8,6 +8,7 @@
 
 #![deny(unsafe_code)]
 
+extern crate bincode;
 extern crate cookie as cookie_rs;
 extern crate heapsize;
 #[macro_use]
@@ -32,6 +33,7 @@ extern crate uuid;
 extern crate webrender_traits;
 extern crate websocket;
 
+use bincode::Error;
 use cookie_rs::Cookie;
 use filemanager_thread::FileManagerThreadMsg;
 use heapsize::HeapSizeOf;
@@ -44,7 +46,6 @@ use ipc_channel::router::ROUTER;
 use request::{Request, RequestInit};
 use response::{HttpsState, Response};
 use servo_url::ServoUrl;
-use std::io::Error as IOError;
 use storage_thread::StorageThreadMsg;
 use websocket::header;
 
@@ -266,7 +267,7 @@ impl<T: FetchResponseListener> Action<T> for FetchResponseMsg {
 /// Handle to a resource thread
 pub type CoreResourceThread = IpcSender<CoreResourceMsg>;
 
-pub type IpcSendResult = Result<(), IOError>;
+pub type IpcSendResult = Result<(), Error>;
 
 /// Abstraction of the ability to send a particular type of message,
 /// used by net_traits::ResourceThreads to ease the use its IpcSender sub-fields

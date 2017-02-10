@@ -16,8 +16,8 @@ doctest = false
 gecko = ["nsstring_vendor", "num_cpus", "rayon/unstable"]
 use_bindgen = ["bindgen", "regex"]
 servo = ["serde/unstable", "serde", "serde_derive", "heapsize_derive",
-         "style_traits/servo", "app_units/plugins", "servo_atoms", "html5ever-atoms",
-         "cssparser/heap_size", "cssparser/serde-serialization",
+         "style_traits/servo", "servo_atoms", "html5ever-atoms",
+         "cssparser/heapsize", "cssparser/serde",
          "rayon/unstable", "servo_url/servo"]
 testing = []
 

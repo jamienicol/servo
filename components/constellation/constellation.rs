@@ -63,6 +63,7 @@
 //! it is very important that it does not panic.
 
 use backtrace::Backtrace;
+use bincode::Error;
 use bluetooth_traits::BluetoothRequest;
 use canvas::canvas_paint_thread::CanvasPaintThread;
 use canvas::webgl_paint_thread::WebGLPaintThread;
@@ -109,7 +110,6 @@ use servo_remutex::ReentrantMutex;
 use servo_url::ServoUrl;
 use std::borrow::ToOwned;
 use std::collections::{HashMap, VecDeque};
-use std::io::Error as IOError;
 use std::iter::once;
 use std::marker::PhantomData;
 use std::process;
@@ -1228,7 +1228,7 @@ impl<Message, LTF, STF> Constellation<Message, LTF, STF>
         self.pipelines.remove(&pipeline_id);
     }
 
-    fn handle_send_error(&mut self, pipeline_id: PipelineId, err: IOError) {
+    fn handle_send_error(&mut self, pipeline_id: PipelineId, err: Error) {
         // Treat send error the same as receiving a panic message
         debug!("Pipeline {:?} send error ({}).", pipeline_id, err);
         let top_level_frame_id = self.get_top_level_frame_for_pipeline(pipeline_id);

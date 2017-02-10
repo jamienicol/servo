@@ -34,7 +34,7 @@ byteorder = "1.0"
 canvas_traits = {path = "../canvas_traits"}
 caseless = "0.1.0"
 cookie = {version = "0.2.5", features = ["serialize-rustc"]}
-cssparser = {version = "0.7", features = ["heap_size", "serde-serialization"]}
+cssparser = {version = "0.7", features = ["heapsize", "serde"]}
 devtools_traits = {path = "../devtools_traits"}
 encoding = "0.2"
 euclid = "0.10.1"
@@ -89,6 +89,7 @@ webvr = {path = "../webvr"}
 webvr_traits = {path = "../webvr_traits"}
 
 [dependencies.webrender_traits]
-git = "https://github.com/servo/webrender"
+git = "https://github.com/nox/webrender"
+rev = "serde"
 default-features = false
 features = ["nightly", "serde_derive", "ipc"]
