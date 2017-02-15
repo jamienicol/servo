@@ -266,7 +266,7 @@ class CommandBase(object):
         self.config.setdefault("build", {})
         self.config["build"].setdefault("android", False)
         self.config["build"].setdefault("mode", "")
-        self.config["build"].setdefault("llvm-assertions", True)
+        self.config["build"].setdefault("llvm-assertions", False)
         self.config["build"].setdefault("debug-mozjs", False)
         self.config["build"].setdefault("ccache", "")
         self.config["build"].setdefault("rustflags", "")
