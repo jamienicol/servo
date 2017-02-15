@@ -1303,7 +1303,7 @@ dependencies = [
 [[package]]
 name = "js"
 version = "0.1.4"
-source = "git+https://github.com/servo/rust-mozjs#b391ec674babe4a3955f562635ea936180c7eea3"
+source = "git+https://github.com/servo/rust-mozjs#02e4cc0182d77a57ee8e04c18d2e612624373c10"
 dependencies = [
  "cmake 0.1.20 (registry+https://github.com/rust-lang/crates.io-index)",
  "heapsize 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)",
